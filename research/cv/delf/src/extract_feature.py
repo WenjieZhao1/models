@@ -239,7 +239,7 @@ def postprocess(q, num_images, image_scales_tensor,
 def main():
     if not os.path.exists(args.target_path):
         os.makedirs(args.target_path)
-
+    print('zwj')
     # Read list of images.
     print('Preprocess: Reading list of images...')
     if args.use_list_txt == "True":

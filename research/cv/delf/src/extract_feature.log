@@ -1,0 +1,4 @@
+  File "extract_feature.py", line 87
+    print(f'Skipping {image_paths[i]}')
+                                     ^
+SyntaxError: invalid syntax

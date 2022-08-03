@@ -40,9 +40,9 @@ make_folder() {
 
 make_folder "${dataset_root_folder}"
 cd ${dataset_root_folder}
-wget https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/paris_1.tgz
-wget https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/paris_2.tgz
-wget https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/corrupt.txt
+wget --no-check-certificate https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/paris_1.tgz
+wget --no-check-certificate https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/paris_2.tgz
+wget --no-check-certificate https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/corrupt.txt
 tar -xzvf paris_1.tgz
 tar -xzvf paris_2.tgz
 cd paris
@@ -55,5 +55,5 @@ cd ..
 mkdir paris6k_images
 mv paris/*/*.jpg paris6k_images/
 rm -rf paris
-wget https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/paris_120310.tgz
+wget --no-check-certificate https://www.robots.ox.ac.uk/~vgg/data/parisbuildings/paris_120310.tgz
 tar -xzvf paris_120310.tgz

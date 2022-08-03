@@ -36,7 +36,7 @@ fi
 function extract_feature()
 {
     echo "Start to extract features..."
-    python src/extract_feature.py --devices=$devices --use_list_txt=True \
+    python3 src/extract_feature.py --devices=$devices --use_list_txt=True \
     --list_images_path="./list_images.txt" --ckpt_path=$checkpoint \
     --images_path=$images_path --target_path="./eval_features" &> extract_feature.log
 }
@@ -44,7 +44,7 @@ function extract_feature()
 function match_images()
 {
     echo "Start to match images..."
-    python src/match_images.py --list_images_path="./list_images.txt" \
+    python3 src/match_images.py --list_images_path="./list_images.txt" \
     --images_path=$images_path --feature_path="./eval_features" \
     --output_image="eval_match.png" &> match_images.log
 }

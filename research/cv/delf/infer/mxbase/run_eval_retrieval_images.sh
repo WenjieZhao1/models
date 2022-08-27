@@ -126,7 +126,9 @@ cd ..
 
 while [ 1 ]
 do
-rm -r ./Preprocess_result
+if [ -d "./Preprocess_result" ]; then
+    rm -r ./Preprocess_result
+fi
 preprocess
 if [ $? -ne 0 ]; then
     exit 1
